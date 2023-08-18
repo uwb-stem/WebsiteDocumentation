@@ -1,6 +1,6 @@
 # STEM CAPSTONE PRESENTATION SYNOPSUM WEBSITE
 Prepared by Haydn Tamura
-Additional Authors:
+
 
 Version: 0.1.0
 Date: 08-18-2023
