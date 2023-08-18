@@ -86,6 +86,35 @@ Here, there are seven rooms. Ensure that the number of sections matches the numb
  <section id="room-8-presentations" class="room hide"></section>
 ```
 
+You will need to insert data into the correct fields to add data to the JSON files. Each JSON file has a list of csse presentations with the following data members:
+```JSON
+{
+            "time":"",
+            "projectId": "",
+            "title": "",
+            "studentName":"", 
+            "studentMajor": "",
+            "projectType":"",
+            "facultyAdvisor":"", 
+            "posterLink": "",
+            "abstract": "",
+},
+```
+Most of these are self-explanatory; however, `projectId` has the format csse-n-XYZ, where n is the number in the JSON file (i.e. csse-5-XYZ for csseRoom5.json), and XYZ is the starting time of the presentation (i.e. csse-5-100 for a presentation at 1:00 pm).
+
+The website supports multiple entries for `StudentName`, `StudentMajor`, `posterLink`, and `abstract`. Each entry in these fields must be separated by "\n\n". For example:
+```JSON
+"time": "1:30 PM - 2:00 PM",
+            "projectId": "csse-4-130",
+            "title": "A Title",
+            "studentName": "Bob \n\nJoe",
+            "studentMajor": "CSSE\n\nCSSE",
+            "projectType": "Group Project - Student Defined",
+            "facultyAdvisor": "Faculty",
+            "posterLink": "posters/csse/bobPoster1.png\n\nposters/csse/joePoster2.png",
+            "abstract": "fdhlskfhdslkfhjdslkfjhsdlkfjds\n\ndjfshdkfhsdkfhdskfhsdkjfh"
+
+```
+The website will automatically parse the data groups in each field and format them on the website.
+
 #### AC
-
-
