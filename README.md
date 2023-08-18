@@ -80,7 +80,7 @@ Additionally, you will need to navigate to `CSSE.html` and go to around line 141
 Here, there are seven rooms. Ensure that the number of sections matches the number of rooms students will present in. So if there are eight presentations, you would add these:
 ```HTML
    ...
-     <button id="room-8-button" class="room-button" data-section="room-8-presentations" type="button">UW1 <PUT ROOM NUMBER HERE></button>
+     <button id="room-8-button" class="room-button" data-section="room-8-presentations" type="button">UW1 PUT ROOM NUMBER HERE</button>
     <div class = "vertical-line"></div>
 ...    
  <section id="room-8-presentations" class="room hide"></section>
