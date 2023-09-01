@@ -119,3 +119,129 @@ Here, there are seven rooms. Ensure that the number of sections matches the numb
 
 
 #### AC
+The applied computing section is done entirly within the `applied-computing.html` file.
+
+##### Formatting
+To create an into block on the website
+```HTML
+    <div class="info-box">
+        <h4>0:00 PM - 0:00 PM </h4>
+        <h1>Welcome & Introductions</h1>
+        <h2>Dr. Laurie Anderson & Sonal Yadav</h2>
+    </div>
+    <div class="space"></div>
+```
+In this example, the introductions are done by Dr. Laurie Anderson and Sonal Yadav. Replace those names with the people presenting for the current capstone.
+
+For the presentations, group each project into a div with the class "acContent". Within this div, you can create multiple presentation cards within divs with `col#` ids, and the presentation cards themselves with divs with the class `student-box`. The following is a template:
+``` HTML
+<div class="acContent_Block">
+        <div class="acContent">
+            <!--  Student column 1  -->
+
+            <div id="col2" class="acspan-12">
+                <div class="gray-box"><!---->
+                    <h3>0:00 PM - 0:00 PM</h3>
+                    <h1><b>Panel Discussion:</b>..</h1>
+                    <div class="gray-box-text">
+                        <b>Host:</b> Host name  |
+                        <b>Assistants:</b> Assistants <br><br>
+                    </div>
+                </div>
+
+                <div class="student-box">
+                    <img src="./posters/applied-computing/kim.png" width="384" height="216" alt="Rat-a-Tat-Cat!" style="cursor:pointer"
+                    onclick="onClick(this)" class="w3-hover-opacity">
+                    <h3>Title</h3>
+                    <div class="students">
+                        <h4>
+                           Studnet<br/>
+                        </h4>
+                        <h5 class="majors">
+                            Applied Computing,<br/>
+                            Second discipline:
+                        </h5>
+                    </div>
+                    <p>Faculty Advisor:  </p>
+                </div>
+
+                <div class="student-box">
+                    <img src="./posters/applied-computing/timbol.png" width="384" height="216" alt="Exerlog" style="cursor:pointer"
+                    onclick="onClick(this)" class="w3-hover-opacity">
+                    <h3>Title</h3>
+                    <div class="students">
+                        <h4>
+                            student<br/>
+                        </h4>
+                        <h5 class="majors">
+                            Applied Computing,<br/>
+                            Second discipline:
+                        </h5>
+                    </div>
+                    <p>Faculty Advisor:  </p>
+                </div>
+
+
+
+            </div>
+            <!-- column 1 END -->
+
+            <!--  Student column 2  -->
+            <div id="col3" class="acspan-6 ">
+                <div class="empty-box"></div>
+                <br/><br/><br/>
+
+
+                <div class="student-box">
+                    <img src="./posters/applied-computing/tran_brandon.jpg" width="384" height="216" alt="Exerlog" style="cursor:pointer"
+                    onclick="onClick(this)" class="w3-hover-opacity">
+                    <h3>Project Title</h3>
+                    <div class="students">
+                        <h4>
+                            Student Name<br/>
+                        </h4>
+                        <h5 class="majors">
+                            Applied Computing,<br/>
+                            Second discipline: ... <br/>...
+                        </h5>
+                    </div>
+                    <p>Faculty Advisor: ...  </p>
+                </div>                <div class="student-box">
+                    <img src="./posters/applied-computing/tran_brandon.jpg" width="384" height="216" alt="Exerlog" style="cursor:pointer"
+                    onclick="onClick(this)" class="w3-hover-opacity">
+                    <h3>Project Title</h3>
+                    <div class="students">
+                        <h4>
+                            Student Name<br/>
+                        </h4>
+                        <h5 class="majors">
+                            Applied Computing,<br/>
+                            Second discipline: ... <br/>...
+                        </h5>
+                    </div>
+                    <p>Faculty Advisor: ...  </p>
+                </div>
+                <div class="student-box">
+                    <img src="./posters/applied-computing/tran_brandon.jpg" width="384" height="216" alt="Exerlog" style="cursor:pointer"
+                    onclick="onClick(this)" class="w3-hover-opacity">
+                    <h3>Project Title</h3>
+                    <div class="students">
+                        <h4>
+                            Student Name<br/>
+                        </h4>
+                        <h5 class="majors">
+                            Applied Computing,<br/>
+                            Second discipline: ... <br/>...
+                        </h5>
+                    </div>
+                    <p>Faculty Advisor: ...  </p>
+                </div>
+
+            </div>
+            <!-- column 2 END -->
+        </div>
+    </div>
+
+```
+
+
