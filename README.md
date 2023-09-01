@@ -10,6 +10,44 @@ This file contains documentation for the Stem Capstone Presentation Synopsum Web
 ## Major Sections
 The following sections show how to update or change data for each Major web page.
 ### Biology
+The biology presentations are done entirely within the `biological-sciences.html` file.
+The html formatting for each presentation is:
+```HTML
+    <section class="presentation">
+        <ul>
+            <li>
+                <p class="present-time">0:00 AM - 0:00 AM</p>
+                <hr class="short-black-line">
+                Project Title
+                <div class="students-extend">
+                    <h4>
+                        student1<br>
+                        student2<br>
+                        C
+                    </h4>
+                    <h5 class="majors">
+                        B.S. Biology<br />
+                        Minor: Neuroscience<br />
+                        
+
+                    </h5>
+                </div>
+                <p>Faculty Advisor: </p>
+            </li>
+
+            <li>
+                <img src="poster path" alt="Placeholder poster">
+            </li>
+        </ul>
+    </section>
+
+    <div class="space"></div>
+
+    <script type='text/javascript' src="js/structure.js"></script>
+
+```
+Replace the placeholder text with the time, students; majors and minors, faculty, and posters with the information for that presentation. For multiple presentation, you can copy and paste that html section and fill in the data. 
+
 ### Physical Sciences (Phys + Chem)
 ### Engineering and Mathematics
 ### Computing and Software Systems (CSSE + AC)
