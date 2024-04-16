@@ -142,7 +142,6 @@ The html formatting for each presentation is:
                     <h4>
                         student1<br>
                         student2<br>
-                        C
                     </h4>
                     <h5 class="majors">
                         B.S. Biology<br />
