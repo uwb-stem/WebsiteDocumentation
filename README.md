@@ -2,10 +2,129 @@
 Prepared by Haydn Tamura
 
 
-Version: 0.1.0
-Date: 08-18-2023
+//Version: 0.1.0 
+//Date: 08-18-2023 
+
+Version: 0.2.0
+Revision: 04-16-2024
 
 This file contains documentation for the Stem Capstone Presentation Synopsum Website. 
+
+
+## General 
+
+You may need to add non-presentation blocks to the website. These will have information such as introductions and break times.
+
+```HTML
+
+
+    <div class="info-box">
+        <h4>0:00 PM - 0:00 PM </h4>
+        <h1>Welcome & Introductions</h1>
+        <h2> text </h2>
+    </div>
+    <div class="space"></div>
+```
+You can use the above snippit for any type of introduction or spacer. 
+
+
+Each webpage has a header on top, containing tabs that go to the other parts of the website. 
+```HTML
+ <header>
+        <section class="uwb-logo">
+            <a href="https://www.uwb.edu/stem"><img src="images/web-white-left-school-signature-uw-bothell.png"
+                    alt="UW Bothell School of STEM Logo"></a>
+        </section>
+
+        <nav class="align-center" id="dawgdrops">
+            <div class="dawgdrops-inner container">
+                <ul class="dawgdrops-nav" id="menu-brand-menu">
+
+                    <li class="dawgdrops-item">
+                        <a href="index.html" id="101" title="Home Page">Home Page</a>
+                    </li>
+
+                    <li class="dawgdrops-item">
+                        <a class="dropdown-toggle" href="#" id="102" title="Biological Sciences">Biological Sciences</a>
+
+                        <ul class="dawgdrops-menu dawgdrops-menu-em" id="menu-102">
+                            <li>
+                                <a href="./biological-sciences.html" title="BIO">Biology</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="dawgdrops-item">
+                        <a class="dropdown-toggle" href="#" id="103" title="Computing & Software System">Computing &
+                            Software Systems</a>
+
+                        <ul class="dawgdrops-menu dawgdrops-menu-em" id="menu-104">
+                            <li>
+                                <a href="./csse.html" title="CSSE">Computer Science & Software Engineering</a>
+                            </li>
+                            <li>
+                                <a href="./applied-computing.html" title="ACMPT">Applied Computing</a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li class="dawgdrops-item">
+                        <a class="dropdown-toggle" href="#" id="102" title="Engineering">Engineering</a>
+
+                        <ul class="dawgdrops-menu dawgdrops-menu-em" id="menu-104">
+                            <li>
+                                <a href="./engineering.html" title="ENG">Engineering</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dawgdrops-item">
+                        <a class="dropdown-toggle" href="#" id="102" title="Mathematics">Mathematics</a>
+
+                        <ul class="dawgdrops-menu dawgdrops-menu-em" id="menu-104">
+                            <li>
+                                <a href="./mathematics.html" title="MATH">Mathematics</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dawgdrops-item">
+                        <a class="dropdown-toggle" href="#" id="102" title="Physics">Physical Sciences</a>
+
+                        <ul class="dawgdrops-menu dawgdrops-menu-em" id="menu-104">
+                            <li>
+                                <a href="./physics+chemistry.html" title="PHYS">Physics</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1>**QUARTER AND YEAR** Capstone & Symposium</h1>
+        <hr>
+    </header>
+
+```
+This code is present on the top of all the `.html` files.
+
+Some quarters may not have presentations for certain majors, so we will need to remove them from the header. Lets say we don't have any engineering presentations.
+
+To remove the link to the engineering page, remove
+```HTML
+
+                    <li class="dawgdrops-item">
+                        <a class="dropdown-toggle" href="#" id="102" title="Engineering">Engineering</a>
+
+                        <ul class="dawgdrops-menu dawgdrops-menu-em" id="menu-104">
+                            <li>
+                                <a href="./engineering.html" title="ENG">Engineering</a>
+                            </li>
+                        </ul>
+                    </li>
+
+```
+
+from the header. **This should be done for every .html file that has the header on the top of the file**. I recomend after removing (or adding back) tabs to the header, copy everything from `<header>` to ` </header>` , and pasting it into the other files where the html from `<header>` to ` </header>` has the old tabs.
  
 ## Major Sections
 The following sections show how to update or change data for each Major web page.
@@ -43,13 +162,274 @@ The html formatting for each presentation is:
 
     <div class="space"></div>
 
-    <script type='text/javascript' src="js/structure.js"></script>
+```
+Replace the placeholder text with the time, students; majors and minors, faculty, and posters with the information for that presentation. 
+If you need to display multiple presentations, copy and paste everything from `<section class="presentation">` to   `<div class="space"></div>` for as many presentations as you need. For example, two presentations:
+```HTML
+    <section class="presentation">
+        <ul>
+            <li>
+                <p class="present-time">12:00 PM - 1:00 PM</p>
+                <hr class="short-black-line">
+                Project Title
+                <div class="students-extend">
+                    <h4>
+                        student1<br>
+                        student2<br>
+                        C
+                    </h4>
+                    <h5 class="majors">
+                        B.S. Biology<br />
+                        Minor: Neuroscience<br />
+                        
+
+                    </h5>
+                </div>
+                <p>Faculty Advisor: </p>
+            </li>
+
+            <li>
+                <img src="poster path" alt="Placeholder poster">
+            </li>
+        </ul>
+    </section>
+
+    <div class="space"></div>
+    <section class="presentation">
+        <ul>
+            <li>
+                <p class="present-time">01:00 PM - 2:00 PM</p>
+                <hr class="short-black-line">
+                Project Title1
+                <div class="students-extend">
+                    <h4>
+                        student1<br>
+                        student2<br>
+                        C
+                    </h4>
+                    <h5 class="majors">
+                        B.S. Biology<br />
+                        Minor: Neuroscience<br />
+                        
+
+                    </h5>
+                </div>
+                <p>Faculty Advisor: </p>
+            </li>
+
+            <li>
+                <img src="poster path" alt="Placeholder poster">
+            </li>
+        </ul>
+    </section>
+
+    <div class="space"></div>
 
 ```
-Replace the placeholder text with the time, students; majors and minors, faculty, and posters with the information for that presentation. For multiple presentation, you can copy and paste that html section and fill in the data. 
+
 
 ### Physical Sciences (Phys + Chem)
-### Engineering and Mathematics
+For the presentation schedule, edit the `physics+chemistry.html` file.
+The presentations for Physics and Chemistry follow the same format as the Biology presentations above:
+
+```HTML
+    <section class="presentation">
+        <ul>
+            <li>
+                <p class="present-time">0:00 AM - 0:00 AM</p>
+                <hr class="short-black-line">
+                <h3>Title</h3>
+                <div class="students-extend">
+                    <h4>
+                        Student<br/>
+                        <!-- <br/> -->
+                    </h4>
+                    <h5 class="majors">
+                        Majors<br/>
+                        <!-- Major<br/> -->
+                    </h5>
+                </div>
+                <p>Faculty Advisor: </p>
+
+                <br/>
+            </li>
+
+            <li>
+                <img src="./posters/placeholder/placeholder.jpg" alt="Placeholder poster">
+            </li>
+        </ul>
+    </section>
+
+```
+
+There is also a seperate .html file for the posters, `physics-poster-presentations.html`.
+
+The format for a poster is as follows:
+
+```HTML
+    <div class="presentation-box">
+        <!-- ------------------------------------ Poster 1 ------------------------------------ -->
+        <section class="presentation">
+            <ul>
+                <li>
+                    <h3>Title</h3>
+                    <div class="students-extend">
+                        <h4>
+                            Student<br/>
+                            <br>
+                            Student<br/>
+                        </h4>
+                        <h5 class="majors">
+                            Major<br/>
+                            Major<br/>
+                        </h5>
+                    </div>
+                    <p>Faculty Advisor: </p>
+                </li>
+        
+                <li>
+                    <img src="./posters/placeholder/placeholder.jpg" alt="Placeholder poster">
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <div class="space"></div>
+
+```
+Like the previouse formatting, if you need multiple posters, copy and paste the sections for as many posters as you need.
+
+### Engineering
+Enginering is done in the engineering.html file:
+```HTML
+    <section class="presentation">
+        <ul>
+            <li>
+                <p class="present-time">8:05 AM - 8:10 AM </p>
+                <hr class="short-black-line">
+                <h3>Title</h3>
+                <div class="students">
+                    <h4>
+                        Students<br/>
+                        <br/>
+                        <br/>
+                    </h4>
+                    <h5 class=majors>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </h5>
+                </div>
+                <p>Faculty Advisor: </p>
+                <p>Industry Sponsor: </p>
+                <p>Industry Sponsor: </p>
+            </li>
+
+            <li>
+                <img src="./posters/placeholder/placeholder.jpg" alt="uav plane Poster">
+            </li>
+        </ul>
+    </section>
+
+```
+For multiple presentations, just copy and paste for as many presentations as you need.
+
+### Mathematics
+The mathematics presentations are a little different. They are defined in the `mathematics.html` file.
+
+```HTML
+    <!-- ------------------------------------ Presentation 1 ------------------------------------ -->
+    <section class="presentation">
+        <ul>
+            <li>
+                <p class="present-time">0:00 AM - 0:00 AM </p>
+                <hr class="short-black-line">
+                <h3>Title</h3>
+                <div class="students">
+                    <h4>
+                       name<br />
+                        <br />
+                        <br />
+                        name2<br />
+                        <br />
+                        <br />
+                       name3<br />
+                        <br />
+                        <br />
+                    </h4>
+
+                    <h5 class=majors>
+                        BS Mathematics<br />
+                        Minor: Physics<br />
+                        <br />
+                        BS Mathematics<br />
+                        Minor:<br />
+                        <br />
+                        BS Mathematics<br />
+                        Minor: <br />
+                        <br />
+                        BS Mathematics<br />
+                        <br />
+                        BS Mathematics<br />
+                        Minor: <br />
+                        <br />
+                    </h5>
+                </div>
+                <p>Faculty Advisor: </p>
+                <p>Industry Sponsor:</p>
+            </li>
+
+            <li>
+                <img src="" alt="Poster">
+            </li>
+        </ul>
+    </section>
+    <!-- ------------------------------------ End Presentation 1 ------------------------------------ -->
+<!-- -------------------------------------- Break 1 ------------------------------------------ -->
+<div class="info-box">
+    <h4>0:00 AM - 0:00 AM</h4>
+    <h1> Break </h1>
+</div>
+```
+Student names are listed in the 
+```
+                    <h4>
+                       name<br />
+                        <br />
+                        <br />
+                        name2<br />
+                        <br />
+                        <br />
+                       name3<br />
+                        <br />
+                        <br />
+                    </h4>
+```
+section. If you need to add more students, add the name and at least 3 `<br />`  within `<h4>` and `<\h4>`.
+The same is for the Majors section,
+```
+
+                    <h5 class=majors>
+                        BS Mathematics<br />
+                        Minor: Physics<br />
+                        <br />
+                        BS Mathematics<br />
+                        Minor:<br />
+                        <br />
+                        BS Mathematics<br />
+                        Minor: <br />
+                        <br />
+                        BS Mathematics<br />
+                        <br />
+                        BS Mathematics<br />
+                        Minor: <br />
+
+```
+However you don't need as many `<br />`.
+
+For multiple presentations, copy everything starting from `  <section class="presentation">`  to the `</div>` closing the `<div class="info-box">`.
+
 ### Computing and Software Systems (CSSE + AC)
 This section details documentation for the CSSE and AC web pages.
 #### CSSE
@@ -82,6 +462,32 @@ if (typeof document.getElementById("room-1-presentations") != "undefined") {
 ```
 In this example, there are eight rooms. If there are more than eight rooms, add an extra `loadCSSEPresentations("room-n-presentations", "js/csseRoomn.json");,` where n is the number of the JSON file.
 
+For example, here is what the code should look like if there are only 4 rooms:
+```JavaScript
+if (typeof document.getElementById("room-1-presentations") != "undefined") {
+    loadCSSEPresentations("room-1-presentations", "js/csseRoom1.json");
+    loadCSSEPresentations("room-2-presentations", "js/csseRoom2.json");
+    loadCSSEPresentations("room-3-presentations", "js/csseRoom3.json");
+    loadCSSEPresentations("room-4-presentations", "js/csseRoom4.json");
+    // loadCSSEPresentations("room-5-presentations", "js/csseRoom5.json");
+   // loadCSSEPresentations("room-6-presentations", "js/csseRoom6.json");
+    
+   // loadCSSEPresentations("room-7-presentations", "js/csseRoom7.json"); 
+    //loadCSSEPresentations("room-8-presentations", "js/csseRoom8.json"); 
+    
+    loadTitleToSideNav("js/csseRoom1.json");
+    loadTitleToSideNav("js/csseRoom2.json");
+    loadTitleToSideNav("js/csseRoom3.json");
+    loadTitleToSideNav("js/csseRoom4.json");
+    // loadTitleToSideNav("js/csseRoom5.json");
+   //  loadTitleToSideNav("js/csseRoom6.json");
+   //  loadTitleToSideNav("js/csseRoom5.json");
+   // loadTitleToSideNav("js/csseRoom6.json");
+   // loadTitleToSideNav("js/csseRoom7.json"); 
+   // loadTitleToSideNav("js/csseRoom8.json"); 
+
+}
+```
 You will need to insert data into the correct fields to add data to the JSON files. Each JSON file has a list of csse presentations with the following data members:
 ```JSON
 {
@@ -159,17 +565,8 @@ Here, there are seven rooms. Ensure that the number of sections matches the numb
 #### AC
 The applied computing section is done entirly within the `applied-computing.html` file.
 
-##### Formatting
-To create an into block on the website
-```HTML
-    <div class="info-box">
-        <h4>0:00 PM - 0:00 PM </h4>
-        <h1>Welcome & Introductions</h1>
-        <h2>Dr. Laurie Anderson & Sonal Yadav</h2>
-    </div>
-    <div class="space"></div>
-```
-In this example, the introductions are done by Dr. Laurie Anderson and Sonal Yadav. Replace those names with the people presenting for the current capstone.
+
+
 
 For the presentations, group each project into a div with the class "acContent". Within this div, you can create multiple presentation cards within divs with `col#` ids, and the presentation cards themselves with divs with the class `student-box`. The following is a template:
 ``` HTML
