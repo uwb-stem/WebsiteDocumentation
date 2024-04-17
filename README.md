@@ -2,11 +2,9 @@
 Prepared by Haydn Tamura
 
 
-//Version: 0.1.0 
-//Date: 08-18-2023 
 
-Version: 0.2.0
-Revision: 04-16-2024
+Version: 0.2.1
+Revision 04-17-2024
 
 This file contains documentation for the Stem Capstone Presentation Synopsum Website. 
 
@@ -25,7 +23,32 @@ You may need to add non-presentation blocks to the website. These will have info
     </div>
     <div class="space"></div>
 ```
-You can use the above snippit for any type of introduction or spacer. 
+You can use the above snippit for any type of introduction or spacer. Put the snippet inbetween sections for presentations or other introduction blocks.
+
+
+
+```HTML
+    <div class="info-box">
+        <h4>0:00 PM - 0:00 PM </h4>
+        <h1>Welcome & Introductions</h1>
+        <h2> text </h2>
+    </div>
+    <div class="space"></div>
+--------------------PRESENTATION-------------
+...
+..  
+..
+.
+
+---------------------END-PRESENTATION--------------------
+    <div class="info-box">
+        <h4>0:00 PM - 0:00 PM </h4>
+        <h1>Break</h1>
+    </div>
+    <div class="space"></div>
+
+
+```
 
 
 Each webpage has a header on top, containing tabs that go to the other parts of the website. 
