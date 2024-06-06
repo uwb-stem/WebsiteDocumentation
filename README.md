@@ -541,6 +541,9 @@ The website supports multiple entries for `StudentName`, `StudentMajor`, `poster
 ```
 The website will automatically parse the data groups in each field and format them on the website.
 
+If the student does not have a poster, or cannot use a poster due to certain circumstances, put <<NOPOSTER>> for the poster link; The website will avoid creating a frame for an empty poster.
+
+
 Additionally, you will need to navigate to `CSSE.html` and go to around line 141:
 ```HTML
 
